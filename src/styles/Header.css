@@ -1,0 +1,14 @@
+.nav-bar {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: inherit;
+}
