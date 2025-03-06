@@ -1,11 +1,22 @@
-import '../styles/Shop.css';
+import styles from '../styles/Shop.module.css';
+import Card from './Card';
 
-function Shop() {
+export default function Shop() {
     return (
-        <div className='shop'>
+        <div className={styles.shop}>
             <h1>Shopping Page</h1>
+            <div className={styles.cardContainer}>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+
+            </div>
+
         </div>
     )
 }
-
-export default Shop;

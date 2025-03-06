@@ -1,0 +1,15 @@
+.shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardContainer {
+    display: grid;
+    /* place-items: center; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    width: 100%;
+    max-width: 1200px;
+}

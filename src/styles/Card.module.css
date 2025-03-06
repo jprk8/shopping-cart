@@ -1,0 +1,61 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    width: 100%;
+}
+
+.description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+
+.imgWrapper {
+    align-self: center;
+}
+
+.price {
+    align-self: end;
+    font-weight: 600;
+}
+
+.qtyWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qtySelector {
+    display: flex;
+    border: 1px solid black;
+}
+
+.qty {
+    width: 40px;
+    padding: 0;
+    border: none;
+    text-align: center;
+
+    /* hide spinner for firefox */
+    -moz-appearance: textfield;
+}
+
+.qty::-webkit-inner-spin-button,
+.qty::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.qtyButton {
+    border: none;
+}
+
+
+
+.cardButton {
+    display: flex;
+    justify-content: space-between;
+}

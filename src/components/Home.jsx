@@ -1,11 +1,9 @@
-import '../styles/Home.css';
+import styles from '../styles/Home.module.css';
 
-function Home() {
+export default function Home() {
     return (
-        <div className='home-page'>
+        <div className={styles.home}>
             <h1>Home Page</h1>
         </div>
     )
 }
-
-export default Home;
