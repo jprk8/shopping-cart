@@ -37,9 +37,9 @@ export default function Card({ imgUrl, name, description, price }) {
             <div className={styles.imgWrapper}>
                 <img src={imgUrl} alt='product image'/>
             </div>
-            <div className={styles.name}>Name</div>
-            <div className={styles.description}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, molestiae. Veritatis minima quos ducimus cumque ea ex amet nesciunt esse!</div>
-            <div className={styles.price}>Price</div>
+            <div className={styles.name}>{name}</div>
+            <div className={styles.description}>{description}</div>
+            <div className={styles.price}>{price}</div>
             <div className={styles.qtyWrapper}>
                 <div>Quantity: </div>
                 <div className={styles.qtySelector}>
