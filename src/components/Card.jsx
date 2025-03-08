@@ -1,7 +1,7 @@
 import styles from '../styles/Card.module.css';
 import { useState } from 'react';
 
-export default function Card({ imgUrl, name, description, price }) {
+export default function Card({ id, imgUrl, name, description, price, handleAddCart }) {
     const [qty, setQty] = useState(1);
 
     function handleInputChange(event) {
@@ -39,8 +39,8 @@ export default function Card({ imgUrl, name, description, price }) {
             </div>
             <div className={styles.name}>{name}</div>
             <div className={styles.description}>{description}</div>
-            <div className={styles.price}>{price}</div>
-            <div className={styles.qtyWrapper}>
+            <div className={styles.price}>$ {price}</div>
+            <div className={styles.qtyContainer}>
                 <div>Quantity: </div>
                 <div className={styles.qtySelector}>
                     <button className={styles.qtyButton} onClick={handleDecrease}>-</button>
@@ -60,7 +60,10 @@ export default function Card({ imgUrl, name, description, price }) {
             <button className={styles.view}>
                     View
                 </button>
-                <button className={styles.addCart}>
+                <button
+                    className={styles.addCart}
+                    onClick={() => handleAddCart(id, name, price, qty, imgUrl)}
+                >
                     Add to Cart
                 </button>
             </div>

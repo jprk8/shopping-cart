@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.shopName,
+.cart {
+    width: 150px;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    gap: 50px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+}

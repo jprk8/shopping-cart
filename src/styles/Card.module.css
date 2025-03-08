@@ -8,10 +8,11 @@
 
 .name {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     text-overflow: ellipsis;
     overflow: hidden;
-    height: 3em;
+    line-height: 1.2em;
+    height: 2.4em;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical; 
@@ -44,7 +45,7 @@
     font-size: 20px;
 }
 
-.qtyWrapper {
+.qtyContainer {
     display: flex;
     justify-content: space-between;
 }
