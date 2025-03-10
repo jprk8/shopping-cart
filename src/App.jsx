@@ -22,13 +22,23 @@ function App() {
         return [...prevCart, { id, name, price, qty, imgUrl }];
       }
     });
-    setCartQty(prevQty => prevQty + qty);
+    // setCartQty(prevQty => prevQty + qty);
   }
 
-  // useEffect to test the cart status after update
+  function updateCartQty(cartItems) {
+    const total = cartItems.reduce((sum, item) => sum + item.qty, 0);
+    setCartQty(total);
+  }
+
   useEffect(() => {
-    console.log("Updated Cart Items: ", cartItems);
+    updateCartQty(cartItems);
+    console.log('Updated Cart Qty: ', cartItems);
   }, [cartItems]);
+
+  // useEffect to test the cart status after update
+  // useEffect(() => {
+  //   console.log("Updated Cart Items: ", cartItems);
+  // }, [cartItems]);
 
   useEffect(() => {
     console.log("Updated Cart Qty: ", cartQty);
@@ -37,7 +47,7 @@ function App() {
   return (
     <>
       <Header cartQty={cartQty} />
-      <Outlet context={{ handleAddCart }} />
+      <Outlet context={{ handleAddCart, cartItems, setCartItems }} />
     </>
   )
 }

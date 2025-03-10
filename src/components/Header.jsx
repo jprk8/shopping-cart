@@ -15,7 +15,9 @@ export default function Header({ cartQty }) {
                 </Link>
             </div>
             <div className={styles.cart}>
-                Cart {cartQty}
+                <Link to='/cart'>
+                    Cart {cartQty}
+                </Link>
             </div>
         </div>
     )

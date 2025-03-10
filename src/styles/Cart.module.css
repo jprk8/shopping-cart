@@ -1,0 +1,20 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 50px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+.total {
+    align-self: end;
+}

@@ -6,10 +6,10 @@ export default function Card({ id, imgUrl, name, description, price, handleAddCa
 
     function handleInputChange(event) {
         const value = event.target.value;
-        if (value === "") {
-            setQty("")
+        if (value === '') {
+            setQty('')
         } else {
-            const numValue = parseInt(value);
+            const numValue = parseInt(value, 10);
             if (numValue > 0 && numValue <= 99) {
                 setQty(numValue);
             }
@@ -17,7 +17,7 @@ export default function Card({ id, imgUrl, name, description, price, handleAddCa
     }
 
     function handleBlur() {
-        if (qty === "") {
+        if (qty === '') {
             setQty(1);
         }
     }
