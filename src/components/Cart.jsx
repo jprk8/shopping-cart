@@ -43,7 +43,14 @@ export default function Cart() {
                     />
                 ))}
             </div>
-            <h2 className={styles.total}>Total: $ {getTotalCost().toFixed(2)}</h2>
+            {cartItems.length > 0 ? (
+                <div className={styles.totalContainer}>
+                    <h2 className={styles.total}>Total: $ {getTotalCost().toFixed(2)}</h2>
+                    <button className={styles.checkout}>Checkout</button>
+                </div>
+            ) : (
+                <div className={styles.empty}>Cart is empty</div>
+            )}
         </div>
     )
 }

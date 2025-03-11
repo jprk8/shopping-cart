@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #222;
+    padding: 30px;
+}
+
+.shop h1 {
+    color: white;
 }
 
 .cardContainer {

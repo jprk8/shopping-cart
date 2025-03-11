@@ -14,7 +14,6 @@ export default function Shop() {
             if (!response.ok) throw new Error(response.status);
             const data = await response.json();
             setProductArray(data);
-            // console.log(data);
         } catch (error) {
             console.log(error);
         }
@@ -29,7 +28,7 @@ export default function Shop() {
 
     return (
         <div className={styles.shop}>
-            <h1>Shopping Page</h1>
+            <h1>All Products</h1>
             <div className={styles.cardContainer}>
                 {productArray.map((product) => (
                     <Card

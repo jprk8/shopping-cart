@@ -1,5 +1,7 @@
 import styles from '../styles/Card.module.css';
 import { useState } from 'react';
+import minus from '../assets/icons/minus-black.svg';
+import plus from '../assets/icons/plus-black.svg';
 
 export default function Card({ id, imgUrl, name, description, price, handleAddCart }) {
     const [qty, setQty] = useState(1);
@@ -43,7 +45,9 @@ export default function Card({ id, imgUrl, name, description, price, handleAddCa
             <div className={styles.qtyContainer}>
                 <div>Quantity: </div>
                 <div className={styles.qtySelector}>
-                    <button className={styles.qtyButton} onClick={handleDecrease}>-</button>
+                    <button className={styles.qtyButton} onClick={handleDecrease}>
+                        <img src={minus} alt=''/>
+                    </button>
                     <input
                         type='number'
                         className={styles.qty}
@@ -53,19 +57,21 @@ export default function Card({ id, imgUrl, name, description, price, handleAddCa
                         min='1'
                         max='99'
                     />
-                    <button className={styles.qtyButton} onClick={handleIncrease}>+</button>
+                    <button className={styles.qtyButton} onClick={handleIncrease}>
+                        <img src={plus} alt=''/>
+                    </button>
                 </div>
             </div>
             <div className={styles.cardButton}>
             <button className={styles.view}>
-                    View
-                </button>
-                <button
-                    className={styles.addCart}
-                    onClick={() => handleAddCart(id, name, price, qty, imgUrl)}
-                >
-                    Add to Cart
-                </button>
+                    Details
+            </button>
+            <button
+                className={styles.addCart}
+                onClick={() => handleAddCart(id, name, price, qty, imgUrl)}
+            >
+                Add to Cart
+            </button>
             </div>
 
         </div>
