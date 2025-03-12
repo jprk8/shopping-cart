@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [cartQty, setCartQty] = useState(0);
@@ -48,6 +49,7 @@ function App() {
     <>
       <Header cartQty={cartQty} />
       <Outlet context={{ handleAddCart, cartItems, setCartItems }} />
+      <Footer />
     </>
   )
 }

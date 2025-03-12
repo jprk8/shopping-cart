@@ -1,0 +1,45 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footerContent {
+    color: white;
+    background-color: #222;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 20px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 18px;
+}
+
+.copyright {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    padding: 5px;
+}
