@@ -1,0 +1,26 @@
+.stars {
+    display: inline-block;
+    font-size: 30px;
+    position: relative;
+    white-space: nowrap;
+    width: max-content;
+}
+  
+.stars::before {
+    content: "★★★★★";
+    color: #ccc;
+}
+  
+.filledStars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgb(240, 181, 34);
+}
+  
+.filledStars::before {
+    content: "★★★★★";
+}

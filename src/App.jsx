@@ -23,7 +23,6 @@ function App() {
         return [...prevCart, { id, name, price, qty, imgUrl }];
       }
     });
-    // setCartQty(prevQty => prevQty + qty);
   }
 
   function updateCartQty(cartItems) {
@@ -35,11 +34,6 @@ function App() {
     updateCartQty(cartItems);
     console.log('Updated Cart Qty: ', cartItems);
   }, [cartItems]);
-
-  // useEffect to test the cart status after update
-  // useEffect(() => {
-  //   console.log("Updated Cart Items: ", cartItems);
-  // }, [cartItems]);
 
   useEffect(() => {
     console.log("Updated Cart Qty: ", cartQty);

@@ -2,8 +2,9 @@ import styles from '../styles/Card.module.css';
 import { useState } from 'react';
 import minus from '../assets/icons/minus-black.svg';
 import plus from '../assets/icons/plus-black.svg';
+import StarRating from './StarRating';
 
-export default function Card({ id, imgUrl, name, description, price, handleAddCart }) {
+export default function Card({ id, imgUrl, name, description, price, handleAddCart, rate, rateCount }) {
     const [qty, setQty] = useState(1);
 
     function handleInputChange(event) {
@@ -41,6 +42,10 @@ export default function Card({ id, imgUrl, name, description, price, handleAddCa
             </div>
             <div className={styles.name}>{name}</div>
             <div className={styles.description}>{description}</div>
+            <div className={styles.rating}>
+                <StarRating rating={rate} />
+                <div className={styles.rateCount}>({rateCount})</div>
+            </div>
             <div className={styles.price}>$ {price}</div>
             <div className={styles.qtyContainer}>
                 <div>Quantity: </div>

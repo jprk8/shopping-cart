@@ -14,6 +14,7 @@ export default function Shop() {
             if (!response.ok) throw new Error(response.status);
             const data = await response.json();
             setProductArray(data);
+            console.log(data);
         } catch (error) {
             console.log(error);
         }
@@ -39,6 +40,8 @@ export default function Shop() {
                         description={product.description}
                         price={product.price.toFixed(2)}
                         handleAddCart={handleAddCart}
+                        rate={product.rating.rate}
+                        rateCount={product.rating.count}
                     />
                 ))}
             </div>

@@ -5,7 +5,6 @@
     border: 1px solid black;
     border-radius: 10px;
     padding: 20px;
-    width: 100%;
     background-color: gainsboro;
 }
 
@@ -52,6 +51,12 @@
     font-size: 20px;
 }
 
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .qtyContainer {
     display: flex;
     justify-content: space-between;
@@ -59,7 +64,6 @@
 
 .qtySelector {
     display: flex;
-    /* border: 1px solid black; */
 }
 
 .qty {
